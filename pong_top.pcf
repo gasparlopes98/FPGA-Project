@@ -1,0 +1,97 @@
+//! **************************************************************************
+// Written by: Map P.58f on Fri Dec 18 15:39:45 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "led" LOCATE = SITE "M5" LEVEL 1;
+COMP "clock" LOCATE = SITE "M6" LEVEL 1;
+COMP "hsync" LOCATE = SITE "J14" LEVEL 1;
+COMP "reset" LOCATE = SITE "P11" LEVEL 1;
+COMP "shoot" LOCATE = SITE "L3" LEVEL 1;
+COMP "vsync" LOCATE = SITE "K13" LEVEL 1;
+COMP "outblue<0>" LOCATE = SITE "H13" LEVEL 1;
+COMP "outblue<1>" LOCATE = SITE "J13" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "A7" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "M4" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "C11" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "G12" LEVEL 1;
+COMP "outred<0>" LOCATE = SITE "C14" LEVEL 1;
+COMP "outred<1>" LOCATE = SITE "D13" LEVEL 1;
+COMP "outred<2>" LOCATE = SITE "F13" LEVEL 1;
+COMP "outgreen<0>" LOCATE = SITE "F14" LEVEL 1;
+COMP "outgreen<1>" LOCATE = SITE "G13" LEVEL 1;
+COMP "outgreen<2>" LOCATE = SITE "G14" LEVEL 1;
+TIMEGRP ClockManager_unit_CLK2X_BUF = BEL "ball_reg_0" BEL "ball_reg_1" BEL
+        "rgb_reg_0" BEL "rgb_reg_1" BEL "rgb_reg_2" BEL
+        "timer_unit/timer_reg_0" BEL "timer_unit/timer_reg_1" BEL
+        "timer_unit/timer_reg_2" BEL "timer_unit/timer_reg_3" BEL
+        "timer_unit/timer_reg_4" BEL "timer_unit/timer_reg_5" BEL
+        "timer_unit/timer_reg_6" BEL "state_reg_FSM_FFd1" BEL
+        "state_reg_FSM_FFd2" BEL "vga_sync_unit/v_count_reg_9" BEL
+        "vga_sync_unit/v_count_reg_8" BEL "vga_sync_unit/v_count_reg_7" BEL
+        "vga_sync_unit/v_count_reg_6" BEL "vga_sync_unit/v_count_reg_5" BEL
+        "vga_sync_unit/v_count_reg_4" BEL "vga_sync_unit/v_count_reg_3" BEL
+        "vga_sync_unit/v_count_reg_2" BEL "vga_sync_unit/v_count_reg_1" BEL
+        "vga_sync_unit/v_count_reg_0" BEL "vga_sync_unit/h_count_reg_9" BEL
+        "vga_sync_unit/h_count_reg_8" BEL "vga_sync_unit/h_count_reg_7" BEL
+        "vga_sync_unit/h_count_reg_6" BEL "vga_sync_unit/h_count_reg_5" BEL
+        "vga_sync_unit/h_count_reg_4" BEL "vga_sync_unit/h_count_reg_3" BEL
+        "vga_sync_unit/h_count_reg_2" BEL "vga_sync_unit/h_count_reg_1" BEL
+        "vga_sync_unit/h_count_reg_0" BEL "vga_sync_unit/h_sync_reg" BEL
+        "vga_sync_unit/mod2_reg" BEL "vga_sync_unit/v_sync_reg" BEL
+        "counter_unit/dig1_reg_3" BEL "counter_unit/dig1_reg_2" BEL
+        "counter_unit/dig1_reg_1" BEL "counter_unit/dig1_reg_0" BEL
+        "counter_unit/dig0_reg_3" BEL "counter_unit/dig0_reg_2" BEL
+        "counter_unit/dig0_reg_1" BEL "counter_unit/dig0_reg_0" BEL
+        "graph_unit/enemy_vx_reg_2" BEL "graph_unit/enemy_vx_reg_0" BEL
+        "graph_unit/enemy_vx_reg_9" BEL "graph_unit/ball_vy_reg_2" BEL
+        "graph_unit/ball_vy_reg_0" BEL "graph_unit/ball_vy_reg_1" BEL
+        "graph_unit/ball_vy_reg_3" BEL "graph_unit/enemy_vy_reg_2" BEL
+        "graph_unit/enemy_vy_reg_0" BEL "graph_unit/enemy_vy_reg_9" BEL
+        "graph_unit/ball_vx_reg_2" BEL "graph_unit/ball_vx_reg_0" BEL
+        "graph_unit/ball_vx_reg_1" BEL "graph_unit/ball_vx_reg_9" BEL
+        "graph_unit/btn_reg_3" BEL "graph_unit/btn_reg_2" BEL
+        "graph_unit/btn_reg_1" BEL "graph_unit/btn_reg_0" BEL
+        "graph_unit/ball_y_reg_9" BEL "graph_unit/ball_y_reg_8" BEL
+        "graph_unit/ball_y_reg_7" BEL "graph_unit/ball_y_reg_6" BEL
+        "graph_unit/ball_y_reg_5" BEL "graph_unit/ball_y_reg_4" BEL
+        "graph_unit/ball_y_reg_3" BEL "graph_unit/ball_y_reg_2" BEL
+        "graph_unit/ball_y_reg_1" BEL "graph_unit/ball_y_reg_0" BEL
+        "graph_unit/ball_x_reg_9" BEL "graph_unit/ball_x_reg_8" BEL
+        "graph_unit/ball_x_reg_7" BEL "graph_unit/ball_x_reg_6" BEL
+        "graph_unit/ball_x_reg_5" BEL "graph_unit/ball_x_reg_4" BEL
+        "graph_unit/ball_x_reg_3" BEL "graph_unit/ball_x_reg_2" BEL
+        "graph_unit/ball_x_reg_1" BEL "graph_unit/ball_x_reg_0" BEL
+        "graph_unit/bar_x_reg_9" BEL "graph_unit/bar_x_reg_8" BEL
+        "graph_unit/bar_x_reg_7" BEL "graph_unit/bar_x_reg_6" BEL
+        "graph_unit/bar_x_reg_5" BEL "graph_unit/bar_x_reg_4" BEL
+        "graph_unit/bar_x_reg_3" BEL "graph_unit/bar_x_reg_2" BEL
+        "graph_unit/bar_x_reg_1" BEL "graph_unit/bar_x_reg_0" BEL
+        "graph_unit/enemy_y_reg_9" BEL "graph_unit/enemy_y_reg_8" BEL
+        "graph_unit/enemy_y_reg_7" BEL "graph_unit/enemy_y_reg_6" BEL
+        "graph_unit/enemy_y_reg_5" BEL "graph_unit/enemy_y_reg_4" BEL
+        "graph_unit/enemy_y_reg_3" BEL "graph_unit/enemy_y_reg_2" BEL
+        "graph_unit/enemy_y_reg_1" BEL "graph_unit/enemy_y_reg_0" BEL
+        "graph_unit/enemy_x_reg_9" BEL "graph_unit/enemy_x_reg_8" BEL
+        "graph_unit/enemy_x_reg_7" BEL "graph_unit/enemy_x_reg_6" BEL
+        "graph_unit/enemy_x_reg_5" BEL "graph_unit/enemy_x_reg_4" BEL
+        "graph_unit/enemy_x_reg_3" BEL "graph_unit/enemy_x_reg_2" BEL
+        "graph_unit/enemy_x_reg_1" BEL "graph_unit/enemy_x_reg_0" BEL
+        "graph_unit/rom_bit_player_2" BEL "graph_unit/rom_bit_player_1" BEL
+        "graph_unit/rom_bit_player_0" BEL "graph_unit/shot_reg" BEL
+        "graph_unit/bar_y_reg_9" BEL "graph_unit/bar_y_reg_8" BEL
+        "graph_unit/bar_y_reg_7" BEL "graph_unit/bar_y_reg_6" BEL
+        "graph_unit/bar_y_reg_5" BEL "graph_unit/bar_y_reg_4" BEL
+        "graph_unit/bar_y_reg_3" BEL "graph_unit/bar_y_reg_2" BEL
+        "graph_unit/bar_y_reg_1" BEL "graph_unit/bar_y_reg_0" BEL
+        "vga_sync_unit/v_count_reg_4_1" BEL "vga_sync_unit/v_count_reg_1_1"
+        BEL "vga_sync_unit/h_count_reg_8_1" BEL "graph_unit/bar_y_reg_1_1" BEL
+        "vga_sync_unit/v_count_reg_2_1" BEL
+        "text_unit/font_unit/Mrom_data_rom0000.A" BEL
+        "ClockManager_unit/CLK2X_BUFG_INST.GCLKMUX" BEL
+        "ClockManager_unit/CLK2X_BUFG_INST";
+PIN ClockManager_unit/DCM_SP_INST_pins<3> = BEL
+        "ClockManager_unit/DCM_SP_INST" PINNAME CLKIN;
+TIMEGRP clk = PIN "ClockManager_unit/DCM_SP_INST_pins<3>";
+SCHEMATIC END;
+
